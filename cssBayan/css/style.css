@@ -33,13 +33,22 @@ body{
     border-top: 1px solid #ccc;
 }
 
+.akkardion__item-header{
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
 .akkardion__title{
     font-size: 1.5rem;
     text-align: left;
     padding: 0.5rem 2rem;
     display: block;
     cursor: pointer;
+    width: 100%;
 }
+
 
 .akkardion__check{
     width: 0;
@@ -47,18 +56,26 @@ body{
     position: absolute;
 }
 
+
+
 .akkardion__check:checked + .akkardion__content {
-     height: 300px;
-     scale: 1;
-     height: 300px;
+    height: 300px;
+    scale: 1;
 }
 
- 
+
+.akkardion__check:hover+ .akkardion__content{
+    height: 300px;
+    scale: 1;
+}
+.akkardion__title:hover+ .akkardion__triangel{
+    transform: rotate(180deg);
+}
 
 .akkardion__content{
     scale: 0;
     height: 0;
-    transition: all .1s linear;
+    transition: all .2s linear;
 }
 
 .akkardion__img{
@@ -71,5 +88,15 @@ body{
     width: 250px;
     height: 300px;
     
+}
+
+.akkardion__triangel{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top: 5px solid rgb(255, 255, 255);
+    margin-right: 1rem;
 }
 
