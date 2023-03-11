@@ -1,0 +1,75 @@
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+  }
+
+body{
+    background-color: orangered;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.akkardion__wrapper{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-top: 5rem;
+    height: 100vh;
+}
+
+.akkardion__item{
+    margin: 0 0.5rem;
+    width: 320px;
+    border-top: 1px solid #ccc;
+}
+
+.akkardion__title{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0.5rem 2rem;
+    display: block;
+    cursor: pointer;
+}
+
+.akkardion__check{
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.akkardion__check:checked + .akkardion__content {
+     height: 300px;
+     scale: 1;
+     height: 300px;
+}
+
+ 
+
+.akkardion__content{
+    scale: 0;
+    height: 0;
+    transition: all .1s linear;
+}
+
+.akkardion__img{
+    text-align: center;
+}
+
+.akkardion__img >img{
+    transition: all .2s linear;
+    margin: 0 auto;
+    width: 250px;
+    height: 300px;
+    
+}
+
